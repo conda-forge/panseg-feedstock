@@ -1,5 +1,5 @@
 {% set python_min = "3.11" %}
-{% set VERSION = "2.1.0" %}
+{% set VERSION = "2.1.1" %}
 
 package:
   name: panseg
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kreshuklab/panseg/archive/refs/tags/{{ VERSION }}.tar.gz
-  sha256: aee5897e4e33c1546d89c60fc9a85a5a472dd16dd47e333dcc8303a552bb531b
+  sha256: a34f5b459d940f998d2e7f37309ea4fc54a0bbbbcb3ff7c0e7c47975a90811cf
 
 build:
   noarch: python
