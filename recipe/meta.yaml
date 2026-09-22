@@ -1,4 +1,4 @@
-{% set python_min = "3.11" %}
+{% set python_min = "3.12" %}
 {% set VERSION = "2.1.2" %}
 
 package:
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/kreshuklab/panseg/archive/refs/tags/{{ VERSION }}.tar.gz
-  sha256: 203586e42185b05b56df86edc1fe8707494645c49e6e8294b0063e1023e39439
+  sha256: c24691509e3f82ad5fe30b576ad8b57de3fd5bf12507ca966db3ea3b33dffc07
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed --no-cache-dir"
     - "mkdir -p {{ PREFIX }}/Menu"  # [not win]
@@ -31,7 +31,7 @@ requirements:
     - setuptools
 
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.14
     - pip
     - bioimageio.core ==0.10.2
     - bioimageio.spec ==0.5.9.1
@@ -54,7 +54,7 @@ requirements:
     - tifffile ==2026.3.3
     - vigra ==1.12.3
     - trimesh ==5.1.0
-    - numpy ==2.4.6
+    - numpy ==2.5.3
     - zarr ==3.1.6
     - zmesh ==1.15.0
 
