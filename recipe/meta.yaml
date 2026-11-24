@@ -1,5 +1,5 @@
 {% set python_min = "3.12" %}
-{% set VERSION = "2.2.0" %}
+{% set VERSION = "2.3.0" %}
 
 package:
   name: panseg
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kreshuklab/panseg/archive/refs/tags/{{ VERSION }}.tar.gz
-  sha256: ddda36000f2f4896386fa22e917d2ff0f8f6aecdf8b2f93a4985d5e218216faa
+  sha256: eebdc15746acc02421870cfb2edfb0828fd6d6c78637043e92f5e98745e80e4d
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ requirements:
     - bioimageio.spec ==0.5.9.1
     - h5py ==3.16.0
     - imageio ==2.37.4
-    - napari ==0.9.1
+    - napari ==0.10.0
     - nifty ==1.2.4
     - pydantic ==2.13.5
     - pyside6 ==6.11.2
